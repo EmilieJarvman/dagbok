@@ -6,3 +6,12 @@
 body {
 	background-color: silver;
 }
+
+#inputDiv {
+	display: flex;
+}
+
+#textArea {
+	width: 200px;
+	height: 200px;
+}
