@@ -40,6 +40,31 @@ inputDiv.appendChild(textAreaElem);
 const sendButton = document.createElement("button");
 sendButton.id = "sendButton";
 sendButton.innerText = "Skicka";
+sendButton.onclick = render;
 inputDiv.appendChild(sendButton);
 
+// Div för renderat inlägg
+const renderDiv = document.createElement("div");
+renderDiv.id = "renderDiv";
+document.body.appendChild(renderDiv);
 
+// Datum för renderat inlägg
+const renderDate = document.createElement("h3");
+renderDate.id = "renderDate";
+renderDiv.appendChild(renderDate);
+
+// Rubrik för renderat inlägg
+const renderHeader = document.createElement("h1");
+renderHeader.id = "renderHeader";
+renderDiv.appendChild(renderHeader);
+
+// Text för renderat inlägg
+const renderText = document.createElement("p");
+renderText.id = "renderText";
+renderDiv.appendChild(renderText);
+
+function render() {
+    renderDate.innerText = dateElem.value;
+    renderHeader.innerText = rubrikInputElem.value;
+    renderText.innerText = textAreaElem.value;
+}
