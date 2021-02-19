@@ -68,3 +68,22 @@ function render() {
     renderHeader.innerText = rubrikInputElem.value;
     renderText.innerText = textAreaElem.value;
 }
+
+
+// Funktion för att lägga inläggen efter varandra
+
+
+// Funktion för att lägga inläggen i datumordning
+
+
+// Funktion för att ta bort inlägg
+// Knapp för att radera inlägg
+const removeButton = document.createElement("button");
+removeButton.id = "removeButton";
+removeButton.innerText = "Radera inlägg";
+removeButton.onclick = remove;
+renderDiv.appendChild(removeButton);
+
+function remove() {
+
+}
