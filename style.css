@@ -1,17 +1,129 @@
-* {
+html {
+	box-sizing: border-box;
+	min-height: 100%;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
 	margin: 0;
 	padding: 0;
 }
 
 body {
-	background-color: silver;
+	/* background-color: silver; */
+	background-image: url("journal.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.mainHeaderDiv {
+	display: flex;
+	justify-content: center;
+	color: white;
+	font-family: "Dancing Script", cursive;
+	font-size: 30px;
+	margin: 20px;
+	text-shadow: 2px 2px 2px rgb(22, 22, 22);
+}
+
+#headerDiv {
+	display: flex;
+	justify-content: center;
+}
+
+#dateElem {
+	/* background-color: red; */
+	width: 150px;
+	padding: 6px;
+	border: none;
+	margin: 5px;
+}
+
+#headerInputElem {
+	/* background-color: red; */
+	width: 150px;
+	padding: 6px;
+	border: none;
+	margin: 5px;
 }
 
 #inputDiv {
-	/* display: flex; */
+	display: flex;
+	flex-direction: column;
+	width: 310px;
+	margin: 0 auto;
+	background-color: white;
+	padding: 8px;
+	justify-content: center;
+	align-items: center;
 }
 
 #textArea {
-	width: 200px;
-	height: 200px;
+	width: 310px;
+	height: 150px;
+	border: none;
+	padding: 8px;
+}
+
+#sendButton {
+	/* position: abssolute; */
+	top: 280px;
+	height: 28px;
+	width: 50px;
+	border: none;
+	background-color: lightsteelblue;
+	border-radius: 4px;
+	margin-top: 8px;
+}
+
+#sendButton:hover {
+	background-color: rgb(133, 147, 167);
+}
+
+#renderDiv {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.renderDate {
+	font-family: "Orbitron", sans-serif;
+	font-size: 14px;
+	color: dimgray;
+}
+
+.renderHeader {
+	font-family: "Dancing Script", cursive;
+	color: midnightblue;
+	margin-top: 10px;
+}
+
+.renderText {
+	font-family: "Dancing Script", cursive;
+	color: midnightblue;
+	margin: 20px 0px;
+}
+
+.entryDiv {
+	background-color: ghostwhite;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	border-radius: 8px;
+	margin: 10px;
+	padding: 20px;
+	box-shadow: 4px 4px 10px rgb(121, 122, 126);
+}
+
+.removeButton {
+	background-color: lightsteelblue;
+	width: 95px;
+	height: 30px;
+	margin: 0 auto;
+	border: none;
+	border-radius: 4px;
+}
+
+.removeButton:hover {
+	background-color: rgb(133, 147, 167);
 }

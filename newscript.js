@@ -1,3 +1,4 @@
+
 const localStorageKey = "diaryEntry";
 const storedEntry = JSON.parse(localStorage.getItem(localStorageKey));
 
@@ -10,11 +11,13 @@ document.body.appendChild(headerDiv);
 
 // Datum
 const dateElem = document.createElement("input");
+dateElem.id = "dateElem";
 dateElem.setAttribute("type", "date");
 headerDiv.appendChild(dateElem);
 
 // Rubrik
 const headerInputElem = document.createElement("input");
+headerInputElem.id = "headerInputElem";
 headerInputElem.placeholder = "Rubrik";
 headerDiv.appendChild(headerInputElem);
 
@@ -25,7 +28,6 @@ document.body.appendChild(inputDiv);
 
 // Text
 const textAreaElem = document.createElement("textarea");
-textAreaElem.type = "text";
 textAreaElem.placeholder = "Kära dagbok...";
 textAreaElem.id = "textArea";
 inputDiv.appendChild(textAreaElem);
@@ -68,7 +70,7 @@ function saveItem() {
 function render() {
     renderDiv.innerText = "";
 
-    for (i in activeDiary) {
+    for (let i in activeDiary) {
         const savedEntry = activeDiary[i];
 
         const entryDiv = document.createElement("div");
@@ -96,7 +98,7 @@ function render() {
             removeButton.innerText = "Radera inlägg";
             removeButton.entryId = i;
             removeButton.onclick = removeEntry;
-            renderDiv.appendChild(removeButton);
+            entryDiv.appendChild(removeButton);
             }
     }
 }
