@@ -8,7 +8,7 @@ body {
 }
 
 #inputDiv {
-	display: flex;
+	/* display: flex; */
 }
 
 #textArea {
